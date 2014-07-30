@@ -6,6 +6,8 @@
 	<!-- Page Title -->
 	<title>Breakk - Create and join events, collect and track payments, and connect with everyone attending.
 </title>
+
+	<link rel="stylesheet" type="text/css" href="css/linkPreview.css" />
 	<!-- Responsive Metatag -->
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />  
 	<!-- <meta http-equiv="X-UA-Compatible" content="IE=9" />-->
@@ -403,6 +405,28 @@
   			 ga('send', 'pageview');
 
 		</script>
+		
+		 <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
 
+   		 <script src='js/linkPreview.js' ></script>
+
+    	 <!-- 
+        	If you are saving and fetching results from database using FLP,
+        	you can customize the layout on this script
+    	 -->
+    	<script src='js/linkPreviewRetrieve.js' ></script>
+    	
+    	 <script>
+        		$(document).ready(function() {
+            	$('#lp1').linkPreview();
+
+            	// changing placeholder
+            	$('#lp2').linkPreview({placeholder: "Second Field"});
+
+	            // bind to a tag the results brought from database
+    	        $('#retrieveFromDatabase').linkPreviewRetrieve();
+        	});
+    	</script>
+		
 	</body>
 </html>
